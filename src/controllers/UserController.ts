@@ -32,7 +32,7 @@ class UserController {
 
     const all = await usersRepository.find();
 
-    return response.json(all);
+    return response.status(201).json(all);
   }
 }
 
