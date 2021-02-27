@@ -16,7 +16,12 @@
 yarn install
 ```
 
-###  
+### Iniciando o servidor
 ```
 yarn dev
+```
+
+### Executando os testes com o Jest
+```
+yarn test
 ```
