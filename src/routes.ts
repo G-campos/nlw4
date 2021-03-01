@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { SurveysController } from './controllers/SurveysController';
 import { UserController } from './controllers/UserController';
+import { SendMailController } from './controllers/SendMailController';
 
 const router = Router();
 
@@ -20,6 +21,7 @@ router.get("/", (request, response) => {
 
 const userController = new UserController();
 const surveysController = new SurveysController();
+const sendMailController = new SendMailController();
 
 router.post("/users", userController.create);
 router.get("/users", userController.show);
@@ -27,6 +29,6 @@ router.get("/users", userController.show);
 router.post("/surveys", surveysController.create);
 router.get("/surveys", surveysController.show);
 
-
+router.post("/sendMail", sendMailController.execute)
 
 export { router };
